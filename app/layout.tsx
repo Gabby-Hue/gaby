@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   title: "Gabby | Full-Stack Web and Android Developer",
   description: "Portfolio of Gabby, full-stack web and android developer building fast, accessible web applications and modern user interfaces.",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.png", sizes: "512x512", type: "image/png" },
+    ],
     shortcut: "/favicon.png",
     apple: "/favicon.png",
   },
