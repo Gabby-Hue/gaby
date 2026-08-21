@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #ffffff;
+  --bg-secondary: #fdf8fa;
+  --bg-card: #ffffff;
+  --bg-card-border: rgba(255, 43, 133, 0.15);
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --pink-accent: #ff2b85;
+  --pink-accent-hover: #e01f70;
+  --pink-glow: rgba(255, 43, 133, 0.15);
+  --pink-light-bg: #fff0f5;
+  --grid-line: rgba(255, 43, 133, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg-primary: #0b0914;
+  --bg-secondary: #130f21;
+  --bg-card: #151124;
+  --bg-card-border: rgba(255, 43, 133, 0.2);
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --pink-accent: #ff2b85;
+  --pink-accent-hover: #ff4d9c;
+  --pink-glow: rgba(255, 43, 133, 0.35);
+  --pink-light-bg: rgba(255, 43, 133, 0.12);
+  --grid-line: rgba(255, 43, 133, 0.07);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  overflow-x: hidden;
+}
+
+/* Background grid pattern matching reference screenshot 4 */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+.pink-gradient-text {
+  background: linear-gradient(135deg, #ff2b85 0%, #ff6baf 50%, #ff94c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 43, 133, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink-accent);
+}
+
+/* Floating Animation for Characters */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: floatAnimation 4s ease-in-out infinite;
 }

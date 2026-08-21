@@ -1,0 +1,127 @@
+import { ProjectItem, TechItem } from '../types';
+
+export const PERSONAL_INFO = {
+  name: 'Gabby',
+  displayName: 'Gabby',
+  role: 'a full-stack web and android developer',
+  tagline: 'a full-stack web and android developer',
+  bio: "Hey, I'm Gabby! I love diving into new technologies, building cool stuff, and finding smart solutions to tricky problems. Here are the tools I rely on most",
+  email: 'contactmegabby@gmail.com',
+  github: 'https://github.com/Gabby-Hue',
+  instagram: 'https://www.instagram.com/g4abbys?igsi=bTZsenRhYjRnMG9q',
+  whatsapp: 'https://wa.me/6287811496665',
+  whatsappDisplay: '087811496665',
+  artCredit: '@kiroobeiniki_',
+  copyrightYear: 2026,
+};
+
+export const TECH_STACK: TechItem[] = [
+  {
+    id: 'nextjs',
+    name: 'Next.js',
+    category: 'frontend',
+    description: 'React Production Framework',
+    icon: '/icon/nextjs.png',
+  },
+  {
+    id: 'react',
+    name: 'React',
+    category: 'frontend',
+    description: 'UI Component Library',
+    icon: '/icon/react.png',
+  },
+  {
+    id: 'laravel',
+    name: 'Laravel',
+    category: 'backend',
+    description: 'PHP Web Framework',
+    icon: '/icon/laravel.png',
+  },
+  {
+    id: 'vite',
+    name: 'Vite',
+    category: 'tool',
+    description: 'Frontend Build Tooling',
+    icon: '/icon/vitejs.png',
+  },
+  {
+    id: 'tailwind',
+    name: 'Tailwind',
+    category: 'frontend',
+    description: 'Utility-First CSS',
+    icon: '/icon/tailwind.png',
+  },
+  {
+    id: 'supabase',
+    name: 'Supabase',
+    category: 'backend',
+    description: 'Backend & Realtime DB',
+    icon: '/icon/supabase.png',
+  },
+  {
+    id: 'prisma',
+    name: 'Prisma',
+    category: 'backend',
+    description: 'Next-Gen Node ORM',
+    icon: '/icon/prisma.png',
+  },
+  {
+    id: 'flutter',
+    name: 'Flutter',
+    category: 'language',
+    description: 'Cross-Platform Mobile Apps',
+    icon: '/icon/flutter.png',
+  },
+];
+
+export const PROJECTS: ProjectItem[] = [
+  {
+    id: 'courtease',
+    title: 'Courtease',
+    tagline: 'Badminton court booking made easy.',
+    description: 'A modern web app for reserving badminton courts, managing schedules, and tracking bookings — all in one clean interface.',
+    image: '/courtease.png',
+    tags: ['Next.js', 'Tailwind', 'React', 'Supabase'],
+    techIcons: [
+      { name: 'Next.js', icon: '/icon/nextjs.png' },
+      { name: 'Tailwind', icon: '/icon/tailwind.png' },
+      { name: 'React', icon: '/icon/react.png' },
+      { name: 'Supabase', icon: '/icon/supabase.png' },
+    ],
+    category: 'Full Stack',
+    liveUrl: 'https://courtease-rpl.vercel.app/',
+    githubUrl: 'https://github.com/Gabby-Hue/AkuKamuDanViolancedistrict',
+    featured: true,
+  },
+  {
+    id: 'angkuters',
+    title: 'Angkuters',
+    tagline: 'Public transport route finder.',
+    description: 'Helps commuters find the best angkot routes across the city with an interactive map and real-time route suggestions.',
+    image: '/angkuters.png',
+    tags: ['Vite', 'Tailwind'],
+    techIcons: [
+      { name: 'Vite', icon: '/icon/vitejs.png' },
+      { name: 'Tailwind', icon: '/icon/tailwind.png' },
+    ],
+    category: 'Web App',
+    liveUrl: 'https://angkuters.vercel.app/',
+    githubUrl: 'https://github.com/Gabby-Hue',
+    featured: true,
+  },
+  {
+    id: 'pawfeast',
+    title: 'Paw Feast',
+    tagline: 'Pet food & nutrition companion.',
+    description: 'A cross-platform mobile app that helps pet owners discover recipes, track nutrition, and schedule feeding times for their furry friends.',
+    image: '/pawfeast.jpeg',
+    tags: ['Flutter'],
+    techIcons: [
+      { name: 'Flutter', icon: '/icon/flutter.png' },
+    ],
+    category: 'UI/UX',
+    liveUrl: '',
+    githubUrl: 'https://github.com/Gabby-Hue/pawfeast',
+    featured: true,
+  },
+];
