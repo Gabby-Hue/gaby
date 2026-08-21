@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: "Gabby | Full-Stack Web and Android Developer",
   description: "Portfolio of Gabby, full-stack web and android developer building fast, accessible web applications and modern user interfaces.",
   icons: {
-    icon: "/porto/gabbybox.png",
-    shortcut: "/porto/gabbybox.png",
-    apple: "/porto/gabbybox.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
